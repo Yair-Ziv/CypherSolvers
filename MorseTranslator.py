@@ -53,6 +53,7 @@ def decode(to_decode):
         current_sequence = ''
     return output
 
+
 def main():
     """
     Main function

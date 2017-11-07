@@ -13,13 +13,12 @@ def translate_sequence(sequence):
             binary_sum += 2 ** (sequence_length - (i + 1))
     return chr(binary_sum)
 
-def encode():
+def encode(to_encode):
     """
     Encodes strings to binary
     """
-    user_input = raw_input('What would you like to encode?\n')
     output = ''
-    for letter in user_input:
+    for letter in to_encode:
         letter_value = ord(letter)
         letter_binary = ''
         if not letter == ' ':
@@ -32,16 +31,15 @@ def encode():
             output += letter_binary + ' '
         else:
             output += ' '
-    print output
+    return output
 
-def decode():
+def decode(to_decode):
     """
     Decodes binary to string
     """
-    user_input = raw_input('What would you like to decode?\n')
     output = ''
     current_sequence = ''
-    for letter in user_input: <>
+    for letter in to_decode:
         if letter == ' ':
             output += translate_sequence(current_sequence)
             current_sequence = ''
@@ -49,7 +47,7 @@ def decode():
             current_sequence += letter
     output += translate_sequence(current_sequence)
 
-    print 'Output: {}'.format(output)
+    return output
 
 def main():
     """
@@ -64,9 +62,9 @@ def main():
         answer_type = raw_input('Would you like to encode or decode?\n').lower()
 
     if answer_type == 'encode':
-        encode()
+        print encode(raw_input('\nWhat would you like to encode?\n'))
     elif answer_type == 'decode':
-        decode()
+        print decode(raw_input('\nWhat would you like to decode?\n'))
 
 if __name__ == '__main__':
     main()
