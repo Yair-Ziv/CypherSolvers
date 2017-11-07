@@ -30,7 +30,7 @@ def convert(string_to_convert, skip_value):
         else:
             new_string += letter
 
-    print new_string
+    return new_string
 
 def main():
     """

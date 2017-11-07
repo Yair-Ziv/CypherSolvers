@@ -8,4 +8,4 @@ In this project are solvers for the following cyphers as of right now.
 | Caesar   | X       |             | 
 | Gimatry  | X       |             |
 | Morse    | X       |             | 
-| Vigenere |         | X           |
+| Vigenere | X       |             |
