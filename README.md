@@ -1,4 +1,4 @@
-#Cypher Solvers
+# Cypher Solvers
 
 In this project are solvers for the following cyphers as of right now.
 
